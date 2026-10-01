@@ -1,0 +1,39 @@
+.finale {
+  --mx: 0px;
+  --my: 0px;
+  --finale-accent: #f3d382;
+  --finale-glow: rgba(243,211,130,.45);
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at calc(50% + var(--mx)) calc(42% + var(--my)), var(--finale-glow), transparent 18%),
+    radial-gradient(circle at 15% 85%, rgba(255,255,255,.045), transparent 30%),
+    linear-gradient(180deg, #060504 0%, #0a0805 48%, #030302 100%);
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.finale::before,
+.finale::after { content:''; position:absolute; inset:0; pointer-events:none; }
+.finale::before { background: radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,.8) 100%); z-index:-1; }
+.finale::after { background: linear-gradient(90deg, transparent, rgba(255,255,255,.025), transparent); transform: translateX(-100%); animation: finaleSweep 8s ease-in-out infinite; z-index:0; }
+.finale-stars { position:absolute; inset:0; z-index:-1; }
+.finale-star { position:absolute; left:var(--x); top:var(--y); width:var(--s); height:var(--s); border-radius:50%; background:#f6edda; opacity:.45; box-shadow:0 0 10px rgba(255,255,255,.5); }
+.finale-orbit { position:absolute; width:min(72vw, 900px); aspect-ratio:1; border:1px solid rgba(255,255,255,.06); border-radius:50%; transform:translate(var(--mx), var(--my)); transition:transform .8s ease-out; pointer-events:none; }
+.finale-orbit--one { width:min(58vw, 720px); }
+.finale-orbit--two { width:min(88vw, 1100px); opacity:.55; transform:translate(calc(var(--mx) * -1), calc(var(--my) * -1)); }
+.finale-content { position:relative; z-index:2; width:min(760px, 88vw); text-align:center; padding:8rem 0; }
+.finale-kicker { display:inline-block; color:var(--finale-accent); font:600 .72rem/1 'Cinzel', Georgia, serif; letter-spacing:.3em; text-transform:uppercase; text-shadow:0 0 18px var(--finale-glow); }
+.finale-seal { width:64px; height:64px; display:grid; place-items:center; margin:1.7rem auto 1.2rem; border:1px solid var(--finale-accent); border-radius:50%; color:var(--finale-accent); font-size:1.35rem; box-shadow:0 0 35px var(--finale-glow); }
+.finale h2 { color:#f7efdd; font:700 clamp(3rem, 8vw, 7.4rem)/.9 'Cinzel Decorative','Cinzel',Georgia,serif; letter-spacing:-.035em; text-shadow:0 10px 50px rgba(0,0,0,.8), 0 0 35px var(--finale-glow); }
+.finale h2 em { color:var(--finale-accent); font-style:normal; }
+.finale p { width:min(560px, 100%); margin:2rem auto 2.4rem; color:rgba(238,224,195,.76); font:1.2rem/1.6 'EB Garamond', Georgia, serif; }
+.finale-cta { display:inline-flex; align-items:center; gap:.8rem; padding:1rem 1.35rem; color:#090604; background:var(--finale-accent); border:1px solid var(--finale-accent); border-radius:999px; text-decoration:none; font:700 .72rem/1 'Cinzel',serif; letter-spacing:.12em; text-transform:uppercase; box-shadow:0 0 30px var(--finale-glow); transition:transform .25s ease, box-shadow .25s ease; }
+.finale-cta:hover { transform:translateY(-3px); box-shadow:0 0 55px var(--finale-glow); }
+.finale-cta span { font-size:1rem; }
+.finale-footer { position:absolute; bottom:1.6rem; left:50%; transform:translateX(-50%); width:min(1100px, 88vw); display:flex; justify-content:space-between; color:rgba(238,224,195,.38); font: .62rem/1 'Cinzel',serif; letter-spacing:.14em; text-transform:uppercase; }
+@keyframes finaleSweep { 0%,55%{transform:translateX(-100%)} 72%,100%{transform:translateX(100%)} }
+@media(max-width:640px){ .finale-content{padding:6rem 0}.finale h2{font-size:clamp(2.9rem,15vw,5rem)}.finale p{font-size:1.05rem}.finale-footer span:first-child{max-width:60%;line-height:1.5}.finale-orbit--two{width:140vw} }
+@media(prefers-reduced-motion:reduce){.finale::after{animation:none}.finale-orbit{transform:none!important}.finale-star{opacity:.5}}
