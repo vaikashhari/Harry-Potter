@@ -78,7 +78,7 @@ export default function Finale({ house }) {
         </nav>
         <div className="finale-footer-credit">
           <span>✦</span>
-          <span>Created by Creatary Labs</span>
+          <span>By Creatary Labs</span>
           <small>© 2026</small>
         </div>
       </footer>
