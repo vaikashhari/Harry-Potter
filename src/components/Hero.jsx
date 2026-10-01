@@ -23,7 +23,6 @@ export default function Hero() {
     const video = videoRef.current;
     const container = containerRef.current;
     let st;
-    let duration = video.duration || 0;
 
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       video.pause();
@@ -76,13 +75,7 @@ export default function Hero() {
       });
 
       const applyProgress = (progress) => {
-        if (duration && Number.isFinite(duration)) {
-          const targetTime = Math.min(progress * duration, Math.max(0, duration - 0.05));
-          if (Math.abs(video.currentTime - targetTime) > 0.03) {
-            video.currentTime = targetTime;
-          }
-        }
-
+        // The video plays independently. Scroll controls only the overlay scenes.
         const current = SCENES.find(
           (scene) => progress >= scene.start && progress < scene.end
         ) || SCENES[SCENES.length - 1];
@@ -120,7 +113,6 @@ export default function Hero() {
     setupScrub();
 
     const handleMetadata = () => {
-      duration = video.duration || 0;
       video.play().catch(() => {
         // Autoplay can be blocked by the browser; scroll scrubbing still works.
       });
