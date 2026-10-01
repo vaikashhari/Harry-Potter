@@ -4,6 +4,7 @@ import { HOUSES, HOUSE_IDS } from '../theme/houses';
 import ParticleLayer from './ParticleLayer';
 import CursorTrail from './CursorTrail';
 import HouseDetail from './HouseDetail';
+import HouseReveal from './HouseReveal';
 import './Section2.css';
 
 function Silhouette({ kind }) {
@@ -77,6 +78,7 @@ export default function Section2({ house, setHouse }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [hoveredHouse, setHoveredHouse] = useState(null);
   const [detailHouse, setDetailHouse] = useState(null);
+  const [revealHouse, setRevealHouse] = useState(null);
 
   useEffect(() => {
     const track = trackRef.current;
@@ -130,6 +132,11 @@ export default function Section2({ house, setHouse }) {
   const hoveredData = hoveredHouse ? HOUSES[hoveredHouse] : null;
   const selectedData = house ? HOUSES[house] : null;
 
+  const selectHouse = (id) => {
+    setHouse(id);
+    setRevealHouse({ ...HOUSES[id], id });
+  };
+
   return (
     <section className="houses" id="houses">
       <div className="houses-heading">
@@ -146,11 +153,11 @@ export default function Section2({ house, setHouse }) {
               className={`house-card house-card--${id} ${activeIndex === i ? 'is-active' : ''} ${house === id ? 'is-selected' : ''}`}
               onMouseEnter={() => setHoveredHouse(id)}
               onMouseLeave={() => setHoveredHouse((current) => (current === id ? null : current))}
-              onClick={() => setHouse(id)}
+              onClick={() => selectHouse(id)
               onKeyDown={(event) => {
                 if (event.key === 'Enter' || event.key === ' ') {
                   event.preventDefault();
-                  setHouse(id);
+                  selectHouse(id);
                 }
               }}
               tabIndex={0}
@@ -204,8 +211,10 @@ export default function Section2({ house, setHouse }) {
       <HouseDetail
         house={detailHouse}
         onClose={() => setDetailHouse(null)}
-        onChoose={() => detailHouse && setHouse(detailHouse.id)}
+        onChoose={() => detailHouse && selectHouse(detailHouse.id)}
       />
+
+      <HouseReveal house={revealHouse} onComplete={() => setRevealHouse(null)} />
     </section>
   );
 }
