@@ -18,7 +18,7 @@ export default function Navbar() {
     const onScroll = () => setScrolled(window.scrollY > 40);
     const observer = new IntersectionObserver((entries) => {
       const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (visible) setActive(`#${visible.target.id}`);
+      if (visible) setActive('#' + visible.target.id);
     }, { rootMargin: '-30% 0px -55% 0px', threshold: [0.05, 0.25, 0.5] });
     sections.forEach((section) => observer.observe(section));
     onScroll();
@@ -27,7 +27,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+    <header className={'navbar ' + (scrolled ? 'navbar--scrolled' : '')}>
       <div className="navbar-inner">
         <a className="navbar-brand" href="#hero">
           <svg className="navbar-crest" viewBox="0 0 48 48" aria-hidden="true">
@@ -42,17 +42,20 @@ export default function Navbar() {
           <span className="navbar-brand-text">Hogwarts</span>
         </a>
 
-        <nav className="navbar-links">
+        <nav className="navbar-links" aria-label="Primary navigation">
           {LINKS.map((link) => (
-            <a key={link.href} href={link.href} className={`navbar-link ${active === link.href ? 'is-active' : ''}`}>
+            <a key={link.href} href={link.href} className={'navbar-link ' + (active === link.href ? 'is-active' : '')}>
               {link.label}
             </a>
           ))}
         </nav>
 
         <button
-          className={`navbar-toggle ${open ? 'is-open' : ''}`}
-          aria-label="Toggle menu"
+          className={'navbar-toggle ' + (open ? 'is-open' : '')}
+          type="button"
+          aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
           onClick={() => setOpen((v) => !v)}
         >
           <span />
@@ -61,9 +64,9 @@ export default function Navbar() {
         </button>
       </div>
 
-      <nav className={`navbar-mobile ${open ? 'is-open' : ''}`}>
+      <nav id="mobile-navigation" className={'navbar-mobile ' + (open ? 'is-open' : '')} aria-label="Mobile navigation">
         {LINKS.map((link) => (
-          <a key={link.href} href={link.href} className={`navbar-link ${active === link.href ? 'is-active' : ''}`} onClick={() => setOpen(false)}>
+          <a key={link.href} href={link.href} className={'navbar-link ' + (active === link.href ? 'is-active' : '')} onClick={() => setOpen(false)}>
             {link.label}
           </a>
         ))}
