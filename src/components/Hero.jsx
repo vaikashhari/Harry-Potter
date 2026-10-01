@@ -101,10 +101,15 @@ export default function Hero() {
         start: 'top top',
         end: '+=500%',
         pin: true,
+        pinSpacing: true,
         anticipatePin: 1,
         scrub: 0.5,
+        invalidateOnRefresh: true,
         onUpdate: (self) => applyProgress(self.progress),
       });
+
+      // Recalculate after the browser has established the document layout.
+      requestAnimationFrame(() => ScrollTrigger.refresh());
 
       applyProgress(st.progress);
     };
