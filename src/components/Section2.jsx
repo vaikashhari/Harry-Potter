@@ -153,7 +153,7 @@ export default function Section2({ house, setHouse }) {
               className={`house-card house-card--${id} ${activeIndex === i ? 'is-active' : ''} ${house === id ? 'is-selected' : ''}`}
               onMouseEnter={() => setHoveredHouse(id)}
               onMouseLeave={() => setHoveredHouse((current) => (current === id ? null : current))}
-              onClick={() => selectHouse(id)
+              onClick={() => selectHouse(id)}
               onKeyDown={(event) => {
                 if (event.key === 'Enter' || event.key === ' ') {
                   event.preventDefault();
