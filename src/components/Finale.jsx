@@ -68,7 +68,7 @@ export default function Finale({ house }) {
       <div className="finale-footer">
         <span>Hogwarts • School of Witchcraft and Wizardry</span>
         <span>✦</span>
-        <span>Always.</span>
+        <span>Created by Creatary Labs</span>
       </div>
     </section>
   );
