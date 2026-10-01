@@ -150,6 +150,7 @@ export default function Hero() {
         autoPlay
         loop
         preload="auto"
+        poster="/og-image.png"
       />
 
       <div className="hero-vignette" />
