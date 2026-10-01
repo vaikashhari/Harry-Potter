@@ -23,6 +23,7 @@ export default function Hero() {
     const video = videoRef.current;
     const container = containerRef.current;
     let st;
+    let duration = video.duration || 0;
 
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       video.pause();
@@ -37,7 +38,6 @@ export default function Hero() {
       existing && existing.kill();
       gsap.killTweensOf('.hero-scene, .hero-scene *');
       activeIdRef.current = null;
-      const duration = video.duration || 0;
 
       SCENES.forEach((scene) => {
         const el = sceneRefs.current[scene.id];
@@ -76,10 +76,11 @@ export default function Hero() {
       });
 
       const applyProgress = (progress) => {
-        if (duration) {
-          if (Math.abs(video.currentTime - progress * duration) > 0.03) {
-          video.currentTime = progress * duration;
-        }
+        if (duration && Number.isFinite(duration)) {
+          const targetTime = Math.min(progress * duration, Math.max(0, duration - 0.05));
+          if (Math.abs(video.currentTime - targetTime) > 0.03) {
+            video.currentTime = targetTime;
+          }
         }
 
         const current = SCENES.find(
@@ -114,14 +115,34 @@ export default function Hero() {
       applyProgress(st.progress);
     };
 
+    // Build the scroll experience immediately. Video metadata is optional so a
+    // delayed/broken media request cannot disable page scrolling.
+    setupScrub();
+
+    const handleMetadata = () => {
+      duration = video.duration || 0;
+      video.play().catch(() => {
+        // Autoplay can be blocked by the browser; scroll scrubbing still works.
+      });
+      ScrollTrigger.refresh();
+    };
+    const handleError = () => {
+      // Keep the cinematic scene/scroll experience alive even if the MP4 fails.
+      video.classList.add('hero-video-failed');
+      ScrollTrigger.refresh();
+    };
+
+    video.addEventListener('loadedmetadata', handleMetadata);
+    video.addEventListener('error', handleError);
+
     if (video.readyState >= 1) {
-      setupScrub();
-    } else {
-      video.addEventListener('loadedmetadata', setupScrub, { once: true });
+      handleMetadata();
     }
 
     return () => {
       st && st.kill();
+      video.removeEventListener('loadedmetadata', handleMetadata);
+      video.removeEventListener('error', handleError);
       Object.values(timelines).forEach((tl) => tl.kill());
     };
   }, []);
@@ -134,7 +155,9 @@ export default function Hero() {
         src="/video/one.mp4"
         muted
         playsInline
-        preload="metadata"
+        autoPlay
+        loop
+        preload="auto"
       />
 
       <div className="hero-vignette" />
