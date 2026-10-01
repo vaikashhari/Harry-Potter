@@ -8,8 +8,11 @@ export default function HouseDetail({ house, onClose, onChoose }) {
     const previousOverflow = document.body.style.overflow;
     document.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
-    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = previousOverflow; };
-  }, [onClose]);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [onClose, house]);
 
   if (!house) return null;
 
@@ -27,7 +30,7 @@ export default function HouseDetail({ house, onClose, onChoose }) {
           <div><span>Founder</span><strong>{house.founder}</strong></div>
         </div>
         <button className="house-modal-choose" type="button" onClick={() => { onChoose(); onClose(); }}>
-          {house.selected ? 'Your house' : `Choose ${house.name}`}
+          {house.selected ? 'Your house' : 'Choose ' + house.name}
         </button>
       </div>
     </div>
