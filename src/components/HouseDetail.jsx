@@ -4,9 +4,11 @@ import './HouseDetail.css';
 export default function HouseDetail({ house, onClose, onChoose }) {
   useEffect(() => {
     const onKey = (event) => event.key === 'Escape' && onClose();
+    if (!house) return undefined;
+    const previousOverflow = document.body.style.overflow;
     document.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
-    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = previousOverflow; };
   }, [onClose]);
 
   if (!house) return null;
