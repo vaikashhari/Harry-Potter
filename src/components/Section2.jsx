@@ -178,7 +178,7 @@ export default function Section2({ house, setHouse }) {
               {id === 'ravenclaw' && <Constellation />}
 
               <div className="house-card-content">
-                <img className="house-card-logo" src={houseData.logo} alt={`${houseData.name} crest`} />
+                <img className="house-card-logo" src={houseData.logo} alt={`${houseData.name} crest`} loading="lazy" decoding="async" />
                 <h1>{houseData.name}</h1>
                 <p>{houseData.tagline}</p>
                 <button type="button" className="house-card-cta" onClick={(event) => { event.stopPropagation(); setDetailHouse({ ...houseData, id, selected: house === id }); }}>
