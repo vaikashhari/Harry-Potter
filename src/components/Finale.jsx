@@ -65,11 +65,23 @@ export default function Finale({ house }) {
         <a className="finale-cta" href="#hero">Return to the castle <span>↗</span></a>
       </div>
 
-      <div className="finale-footer">
-        <span>Hogwarts • School of Witchcraft and Wizardry</span>
-        <span>✦</span>
-        <span>Created by Creatary Labs • © 2026</span>
-      </div>
+      <footer className="finale-footer">
+        <div className="finale-footer-brand">
+          <strong>Hogwarts</strong>
+          <span>School of Witchcraft and Wizardry</span>
+        </div>
+        <nav className="finale-footer-nav" aria-label="Footer navigation">
+          <a href="#hero">Hogwarts</a>
+          <a href="#sorting">Sorting Hat</a>
+          <a href="#houses">Houses</a>
+          <a href="#finale">Great Hall</a>
+        </nav>
+        <div className="finale-footer-credit">
+          <span>✦</span>
+          <span>Created by Creatary Labs</span>
+          <small>© 2026</small>
+        </div>
+      </footer>
     </section>
   );
 }
