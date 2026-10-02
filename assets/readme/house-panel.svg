@@ -1,6 +1,6 @@
 <svg width="1200" height="450" viewBox="0 0 1200 450" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">The Four Hogwarts Houses</title>
-  <desc id="desc">A magical four-panel overview using lion, serpent, eagle, and badger symbols for the four houses.</desc>
+  <desc id="desc">A magical four-panel overview using recognizable lion, serpent, eagle, and badger symbols.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="450" gradientUnits="userSpaceOnUse">
       <stop stop-color="#090B11"/>
@@ -14,65 +14,64 @@
   <text x="50" y="72" fill="#F0E2B3" font-size="28" font-family="Georgia, serif" font-weight="700">THE FOUR HOUSES</text>
   <text x="50" y="98" fill="#9F8C63" font-size="16" font-family="Consolas, monospace">SELECT A HOUSE // THEME THE EXPERIENCE // KEEP YOUR CHOICE ACROSS VISITS</text>
 
+  <!-- GRYFFINDOR / LION -->
   <g transform="translate(50 135)">
     <rect width="255" height="245" rx="16" fill="#180D10" stroke="#8D3340"/>
     <text x="20" y="40" fill="#F1D17C" font-size="22" font-family="Georgia, serif" font-weight="700">GRYFFINDOR</text>
     <text x="20" y="76" fill="#D6C6A1" font-size="15" font-family="'Segoe UI', Arial">Courage · Nerve · Chivalry</text>
-    <g transform="translate(55 98)" fill="none" stroke="#B9923F" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.78">
-      <circle cx="72" cy="26" r="16"/>
-      <path d="M60 22L54 12L64 16M84 22L90 12L80 16"/>
-      <path d="M47 56C52 43 61 36 72 36C83 36 92 43 97 56"/>
-      <path d="M36 74C45 63 58 56 72 56C86 56 99 63 108 74"/>
-      <path d="M52 104C52 83 61 73 72 73C83 73 92 83 92 104"/>
-      <path d="M46 104H98"/>
-      <path d="M102 87C117 89 124 103 116 115C109 125 93 122 90 110"/>
-      <path d="M42 90C32 94 27 104 31 116"/>
+    <g transform="translate(72 93)" opacity="0.86">
+      <path d="M55 15L69 28L88 22L94 41L112 48L103 66L111 84L92 91L86 111L67 105L54 119L40 105L21 111L15 91L-4 84L4 66L-5 48L13 41L19 22L38 28Z" fill="#B9923F"/>
+      <path d="M55 35C72 35 84 48 84 66C84 88 72 101 55 101C38 101 26 88 26 66C26 48 38 35 55 35Z" fill="#180D10"/>
+      <path d="M37 52L45 46L49 55M73 52L65 46L61 55" stroke="#B9923F" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M47 69L55 75L63 69L60 82H50Z" fill="#B9923F"/>
+      <path d="M43 88C50 94 60 94 67 88" stroke="#B9923F" stroke-width="4" stroke-linecap="round"/>
     </g>
     <text x="20" y="226" fill="#8F7352" font-size="13" font-family="Consolas, monospace">HOUSE_THEME :: ACTIVE</text>
   </g>
 
+  <!-- SLYTHERIN / SERPENT -->
   <g transform="translate(330 135)">
     <rect width="255" height="245" rx="16" fill="#0B1511" stroke="#3A7259"/>
     <text x="20" y="40" fill="#A9D7BE" font-size="22" font-family="Georgia, serif" font-weight="700">SLYTHERIN</text>
     <text x="20" y="76" fill="#C5D2CB" font-size="15" font-family="'Segoe UI', Arial">Ambition · Cunning · Pride</text>
-    <g transform="translate(34 96)" fill="none" stroke="#6FAC8B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.78">
-      <path d="M18 88C35 67 58 63 76 77C95 91 116 87 130 67C147 43 168 40 189 56"/>
-      <path d="M188 56C195 60 203 60 210 55C203 50 196 50 188 56Z" fill="#6FAC8B" stroke="none"/>
-      <path d="M36 84C40 92 40 101 35 109"/>
-      <circle cx="181" cy="50" r="2.5" fill="#6FAC8B" stroke="none"/>
-      <path d="M172 61L177 67L185 62"/>
+    <g transform="translate(52 103)" opacity="0.86">
+      <path d="M18 86C30 64 49 57 67 68C84 79 94 99 116 94C136 89 139 63 160 54C177 47 192 53 204 64" fill="none" stroke="#6FAC8B" stroke-width="9" stroke-linecap="round"/>
+      <path d="M194 50C207 49 219 55 226 63C217 72 205 75 193 70L184 62Z" fill="#6FAC8B"/>
+      <circle cx="212" cy="61" r="2.8" fill="#0B1511"/>
+      <path d="M227 64L237 60M227 64L237 68" stroke="#6FAC8B" stroke-width="3" stroke-linecap="round"/>
+      <path d="M27 82C18 89 13 98 14 108" stroke="#6FAC8B" stroke-width="6" stroke-linecap="round"/>
     </g>
     <text x="20" y="226" fill="#668374" font-size="13" font-family="Consolas, monospace">HOUSE_THEME :: ACTIVE</text>
   </g>
 
+  <!-- RAVENCLAW / EAGLE -->
   <g transform="translate(610 135)">
     <rect width="255" height="245" rx="16" fill="#0D1119" stroke="#466187"/>
     <text x="20" y="40" fill="#C1D2EB" font-size="22" font-family="Georgia, serif" font-weight="700">RAVENCLAW</text>
     <text x="20" y="76" fill="#CDC3AA" font-size="15" font-family="'Segoe UI', Arial">Wit · Learning · Wisdom</text>
-    <g transform="translate(52 96)" fill="none" stroke="#8FA7CB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.78">
-      <path d="M73 31C88 17 105 16 120 32"/>
-      <path d="M96 36V114"/>
-      <path d="M96 52C74 54 57 67 49 90C63 86 78 83 96 81"/>
-      <path d="M96 52C118 54 135 67 143 90C129 86 114 83 96 81"/>
-      <path d="M84 105L96 116L108 105"/>
-      <path d="M88 33L96 21L104 33"/>
+    <g transform="translate(50 100)" opacity="0.88">
+      <path d="M105 24C93 32 88 43 89 57C76 49 62 43 47 42C58 54 66 65 70 78C54 73 38 72 21 75C40 88 58 98 79 103C88 105 96 103 104 98C112 103 120 105 129 103C150 98 168 88 187 75C170 72 154 73 138 78C142 65 150 54 161 42C146 43 132 49 119 57C120 43 116 32 105 24Z" fill="#8FA7CB"/>
+      <path d="M105 25L119 14L133 19L119 28" fill="#8FA7CB"/>
+      <circle cx="120" cy="20" r="2.4" fill="#0D1119"/>
+      <path d="M104 57V105" stroke="#0D1119" stroke-width="4" opacity=".65"/>
+      <path d="M91 103L82 116M117 103L126 116" stroke="#8FA7CB" stroke-width="5" stroke-linecap="round"/>
     </g>
     <text x="20" y="226" fill="#687B98" font-size="13" font-family="Consolas, monospace">HOUSE_THEME :: ACTIVE</text>
   </g>
 
+  <!-- HUFFLEPUFF / BADGER -->
   <g transform="translate(890 135)">
     <rect width="255" height="245" rx="16" fill="#17140B" stroke="#937B35"/>
     <text x="20" y="40" fill="#F0D77B" font-size="22" font-family="Georgia, serif" font-weight="700">HUFFLEPUFF</text>
     <text x="20" y="76" fill="#D9D1B5" font-size="15" font-family="'Segoe UI', Arial">Loyalty · Patience · Fairness</text>
-    <g transform="translate(56 94)" fill="none" stroke="#C2A64D" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.78">
-      <path d="M57 40C64 27 77 20 92 20C107 20 120 27 127 40"/>
-      <path d="M63 44C60 62 65 79 78 89"/>
-      <path d="M121 44C124 62 119 79 106 89"/>
-      <path d="M78 89C82 98 87 106 92 112C97 106 102 98 106 89"/>
-      <path d="M80 50C84 48 88 47 92 47C96 47 100 48 104 50"/>
-      <path d="M92 47V79"/>
-      <path d="M71 57C61 58 53 65 49 75"/>
-      <path d="M113 57C123 58 131 65 135 75"/>
+    <g transform="translate(69 96)" opacity="0.88">
+      <path d="M58 17C77 17 94 29 102 47L111 64L101 85C94 101 78 111 58 111C38 111 22 101 15 85L5 64L14 47C22 29 39 17 58 17Z" fill="#C2A64D"/>
+      <path d="M30 29L42 18L50 35M86 29L74 18L66 35" fill="#17140B"/>
+      <path d="M44 31C36 44 33 58 35 74C37 90 45 101 58 107C71 101 79 90 81 74C83 58 80 44 72 31L61 52L58 84L55 52Z" fill="#17140B"/>
+      <ellipse cx="42" cy="62" rx="5" ry="4" fill="#C2A64D"/>
+      <ellipse cx="74" cy="62" rx="5" ry="4" fill="#C2A64D"/>
+      <path d="M52 85L58 91L64 85" fill="#C2A64D"/>
+      <path d="M48 97C54 101 62 101 68 97" stroke="#C2A64D" stroke-width="3.5" stroke-linecap="round"/>
     </g>
     <text x="20" y="226" fill="#8A7B4B" font-size="13" font-family="Consolas, monospace">HOUSE_THEME :: ACTIVE</text>
   </g>
