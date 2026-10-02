@@ -1,0 +1,8 @@
+<svg width="1200" height="72" viewBox="0 0 1200 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Magical section divider">
+<rect width="1200" height="72" rx="14" fill="#0A0C12"/>
+<path d="M35 36H470M730 36H1165" stroke="#735D32" stroke-width="2"/>
+<path d="M485 36C520 18 550 18 582 34M715 36C680 18 650 18 618 34" stroke="#A5894B" stroke-width="1.5" opacity=".7"/>
+<circle cx="600" cy="36" r="27" stroke="#886D38" opacity=".6"/>
+<circle cx="600" cy="36" r="14" stroke="#C9A85C" opacity=".9"/>
+<path d="M600 17L604 30L618 30L607 38L611 52L600 44L589 52L593 38L582 30L596 30Z" fill="#D9B45C"/>
+</svg>
