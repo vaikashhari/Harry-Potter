@@ -1,37 +1,79 @@
 <svg width="1200" height="450" viewBox="0 0 1200 450" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-<title id="title">The four Hogwarts Houses</title><desc id="desc">A magical four-panel overview of Gryffindor, Slytherin, Ravenclaw and Hufflepuff.</desc>
-<defs><linearGradient id="bg" x1="0" y1="0" x2="1200" y2="450"><stop stop-color="#090B11"/><stop offset="1" stop-color="#121018"/></linearGradient></defs>
-<rect width="1200" height="450" rx="22" fill="url(#bg)"/>
-<rect x="24" y="24" width="1152" height="402" rx="17" stroke="#6E5830"/>
-<text x="50" y="72" fill="#F0E2B3" font-size="28" font-family="Georgia, serif" font-weight="700">THE FOUR HOUSES</text>
-<text x="50" y="98" fill="#9F8C63" font-size="16" font-family="Consolas, monospace">SELECT A HOUSE // THEME THE EXPERIENCE // KEEP YOUR CHOICE ACROSS VISITS</text>
-<g transform="translate(50 135)">
- <rect width="255" height="245" rx="16" fill="#180D10" stroke="#8D3340"/>
- <text x="20" y="40" fill="#F1D17C" font-size="22" font-family="Georgia, serif" font-weight="700">GRYFFINDOR</text>
- <text x="20" y="76" fill="#D6C6A1" font-size="15" font-family="'Segoe UI', Arial">Courage · Nerve · Chivalry</text>
- <path d="M126 104L143 140L183 144L153 171L161 211L126 191L91 211L99 171L69 144L109 140Z" fill="#B9923F" opacity=".55"/>
- <text x="20" y="226" fill="#8F7352" font-size="13" font-family="Consolas, monospace">HOUSE_THEME :: ACTIVE</text>
-</g>
-<g transform="translate(330 135)">
- <rect width="255" height="245" rx="16" fill="#0B1511" stroke="#3A7259"/>
- <text x="20" y="40" fill="#A9D7BE" font-size="22" font-family="Georgia, serif" font-weight="700">SLYTHERIN</text>
- <text x="20" y="76" fill="#C5D2CB" font-size="15" font-family="'Segoe UI', Arial">Ambition · Cunning · Pride</text>
- <path d="M68 183C100 125 125 201 154 142C169 111 186 127 194 151" fill="none" stroke="#6FAC8B" stroke-width="7" stroke-linecap="round" opacity=".55"/>
- <text x="20" y="226" fill="#668374" font-size="13" font-family="Consolas, monospace">HOUSE_THEME :: ACTIVE</text>
-</g>
-<g transform="translate(610 135)">
- <rect width="255" height="245" rx="16" fill="#0D1119" stroke="#466187"/>
- <text x="20" y="40" fill="#C1D2EB" font-size="22" font-family="Georgia, serif" font-weight="700">RAVENCLAW</text>
- <text x="20" y="76" fill="#CDC3AA" font-size="15" font-family="'Segoe UI', Arial">Wit · Learning · Wisdom</text>
- <g fill="#8FA7CB" opacity=".72"><circle cx="86" cy="130" r="4"/><circle cx="128" cy="110" r="4"/><circle cx="166" cy="145" r="4"/><circle cx="114" cy="176" r="4"/></g>
- <path d="M86 130L128 110L166 145L114 176L86 130" stroke="#718EB8" opacity=".65"/>
- <text x="20" y="226" fill="#687B98" font-size="13" font-family="Consolas, monospace">HOUSE_THEME :: ACTIVE</text>
-</g>
-<g transform="translate(890 135)">
- <rect width="255" height="245" rx="16" fill="#17140B" stroke="#937B35"/>
- <text x="20" y="40" fill="#F0D77B" font-size="22" font-family="Georgia, serif" font-weight="700">HUFFLEPUFF</text>
- <text x="20" y="76" fill="#D9D1B5" font-size="15" font-family="'Segoe UI', Arial">Loyalty · Patience · Fairness</text>
- <circle cx="128" cy="151" r="49" stroke="#C2A64D" stroke-width="5" opacity=".55"/><path d="M98 160C116 129 141 128 160 160" stroke="#C2A64D" stroke-width="6" stroke-linecap="round" opacity=".55"/>
- <text x="20" y="226" fill="#8A7B4B" font-size="13" font-family="Consolas, monospace">HOUSE_THEME :: ACTIVE</text>
-</g>
+  <title id="title">The Four Hogwarts Houses</title>
+  <desc id="desc">A magical four-panel overview using lion, serpent, eagle, and badger symbols for the four houses.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#090B11"/>
+      <stop offset="1" stop-color="#121018"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="450" rx="22" fill="url(#bg)"/>
+  <rect x="24" y="24" width="1152" height="402" rx="17" stroke="#6E5830"/>
+
+  <text x="50" y="72" fill="#F0E2B3" font-size="28" font-family="Georgia, serif" font-weight="700">THE FOUR HOUSES</text>
+  <text x="50" y="98" fill="#9F8C63" font-size="16" font-family="Consolas, monospace">SELECT A HOUSE // THEME THE EXPERIENCE // KEEP YOUR CHOICE ACROSS VISITS</text>
+
+  <g transform="translate(50 135)">
+    <rect width="255" height="245" rx="16" fill="#180D10" stroke="#8D3340"/>
+    <text x="20" y="40" fill="#F1D17C" font-size="22" font-family="Georgia, serif" font-weight="700">GRYFFINDOR</text>
+    <text x="20" y="76" fill="#D6C6A1" font-size="15" font-family="'Segoe UI', Arial">Courage · Nerve · Chivalry</text>
+    <g transform="translate(55 98)" fill="none" stroke="#B9923F" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.78">
+      <circle cx="72" cy="26" r="16"/>
+      <path d="M60 22L54 12L64 16M84 22L90 12L80 16"/>
+      <path d="M47 56C52 43 61 36 72 36C83 36 92 43 97 56"/>
+      <path d="M36 74C45 63 58 56 72 56C86 56 99 63 108 74"/>
+      <path d="M52 104C52 83 61 73 72 73C83 73 92 83 92 104"/>
+      <path d="M46 104H98"/>
+      <path d="M102 87C117 89 124 103 116 115C109 125 93 122 90 110"/>
+      <path d="M42 90C32 94 27 104 31 116"/>
+    </g>
+    <text x="20" y="226" fill="#8F7352" font-size="13" font-family="Consolas, monospace">HOUSE_THEME :: ACTIVE</text>
+  </g>
+
+  <g transform="translate(330 135)">
+    <rect width="255" height="245" rx="16" fill="#0B1511" stroke="#3A7259"/>
+    <text x="20" y="40" fill="#A9D7BE" font-size="22" font-family="Georgia, serif" font-weight="700">SLYTHERIN</text>
+    <text x="20" y="76" fill="#C5D2CB" font-size="15" font-family="'Segoe UI', Arial">Ambition · Cunning · Pride</text>
+    <g transform="translate(34 96)" fill="none" stroke="#6FAC8B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.78">
+      <path d="M18 88C35 67 58 63 76 77C95 91 116 87 130 67C147 43 168 40 189 56"/>
+      <path d="M188 56C195 60 203 60 210 55C203 50 196 50 188 56Z" fill="#6FAC8B" stroke="none"/>
+      <path d="M36 84C40 92 40 101 35 109"/>
+      <circle cx="181" cy="50" r="2.5" fill="#6FAC8B" stroke="none"/>
+      <path d="M172 61L177 67L185 62"/>
+    </g>
+    <text x="20" y="226" fill="#668374" font-size="13" font-family="Consolas, monospace">HOUSE_THEME :: ACTIVE</text>
+  </g>
+
+  <g transform="translate(610 135)">
+    <rect width="255" height="245" rx="16" fill="#0D1119" stroke="#466187"/>
+    <text x="20" y="40" fill="#C1D2EB" font-size="22" font-family="Georgia, serif" font-weight="700">RAVENCLAW</text>
+    <text x="20" y="76" fill="#CDC3AA" font-size="15" font-family="'Segoe UI', Arial">Wit · Learning · Wisdom</text>
+    <g transform="translate(52 96)" fill="none" stroke="#8FA7CB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.78">
+      <path d="M73 31C88 17 105 16 120 32"/>
+      <path d="M96 36V114"/>
+      <path d="M96 52C74 54 57 67 49 90C63 86 78 83 96 81"/>
+      <path d="M96 52C118 54 135 67 143 90C129 86 114 83 96 81"/>
+      <path d="M84 105L96 116L108 105"/>
+      <path d="M88 33L96 21L104 33"/>
+    </g>
+    <text x="20" y="226" fill="#687B98" font-size="13" font-family="Consolas, monospace">HOUSE_THEME :: ACTIVE</text>
+  </g>
+
+  <g transform="translate(890 135)">
+    <rect width="255" height="245" rx="16" fill="#17140B" stroke="#937B35"/>
+    <text x="20" y="40" fill="#F0D77B" font-size="22" font-family="Georgia, serif" font-weight="700">HUFFLEPUFF</text>
+    <text x="20" y="76" fill="#D9D1B5" font-size="15" font-family="'Segoe UI', Arial">Loyalty · Patience · Fairness</text>
+    <g transform="translate(56 94)" fill="none" stroke="#C2A64D" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.78">
+      <path d="M57 40C64 27 77 20 92 20C107 20 120 27 127 40"/>
+      <path d="M63 44C60 62 65 79 78 89"/>
+      <path d="M121 44C124 62 119 79 106 89"/>
+      <path d="M78 89C82 98 87 106 92 112C97 106 102 98 106 89"/>
+      <path d="M80 50C84 48 88 47 92 47C96 47 100 48 104 50"/>
+      <path d="M92 47V79"/>
+      <path d="M71 57C61 58 53 65 49 75"/>
+      <path d="M113 57C123 58 131 65 135 75"/>
+    </g>
+    <text x="20" y="226" fill="#8A7B4B" font-size="13" font-family="Consolas, monospace">HOUSE_THEME :: ACTIVE</text>
+  </g>
 </svg>
